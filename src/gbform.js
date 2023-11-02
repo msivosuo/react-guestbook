@@ -76,7 +76,7 @@ function GBForm() {
                 </div>
                 <div >
                     <label className={styles.gblabel} for="msg_input"> Your Message*  </label>
-                        <textarea rows="5" cols="30 "id="msg_input" className={styles.gbtextarea} value={inputs.msg || ""} onChange={handleChange} name="msg" />
+                        <textarea rows="5" cols="30" id="msg_input" className={styles.gbtextarea} value={inputs.msg || ""} onChange={handleChange} name="msg" />
                 </div>
                 <div >
                     <input className={styles.gbbutton} type="submit" name="submit" />
