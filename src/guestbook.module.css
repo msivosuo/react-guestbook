@@ -22,6 +22,10 @@
  *SOFTWARE.
  */
 
+ .gblist:empty::after {
+    content: "No guestbook entries";
+  }
+
  .gbentry {
     margin: 1%;
     text-align: left;
