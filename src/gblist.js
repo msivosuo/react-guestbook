@@ -77,27 +77,18 @@ function GBEntryList() {
         }
     }
 
-    if (entries.length <= 0) {
-        console.log(entries.entries.length)	
-        return (
-	          <div>
-	              <h2>Guestbook Entry List</h2>
-	              <p>No Entries</p>
-	          </div>
-        );	    
-    }
-    else {
-        return (	
-	          <ol>
-	              <h2>Guestbook Entry List</h2>
-	              {entries.sort(compareDates).map((entry) => { 
-	                  return (
-	                      <GBEntry key={entry.id} date={entry.date} name={entry.name} message={entry.message} />  
-                    );
-	              })}	    
-            </ol>
-        );
-    }
+    return (
+        <>	
+            <h2>Guestbook Entry List</h2>
+                <ol className={styles.gblist}>
+                    {entries.sort(compareDates).map((entry) => { 
+                        return (
+                            <GBEntry key={entry.id} date={entry.date} name={entry.name} message={entry.message} />  
+                        );
+                    })}	    
+                </ol>
+        </>
+    );
 }
 
 
