@@ -68,7 +68,7 @@ function GBForm() {
 	
 
     return (
-	      <form onSubmit={handleSubmit}>
+	<form onSubmit={handleSubmit}>
             <div className={styles.gbdiv}>
                 <div >
                     <label className={styles.gblabel} for="name_input">Your Name*</label>
