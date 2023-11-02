@@ -37,7 +37,7 @@ function GBForm() {
         const name = event.target.name;
         const value = event.target.value;
         setInputs(values => ({...values, [name]: value}))
-        console.log("handleChange")	  
+        console.log("handleChange", event)	  
     }
 
     const addJsonEntry = async () =>  {
@@ -71,11 +71,11 @@ function GBForm() {
 	<form onSubmit={handleSubmit}>
             <div className={styles.gbdiv}>
                 <div >
-                    <label className={styles.gblabel} for="name_input">Your Name*</label>
+                    <label className={styles.gblabel} htmlFor="name_input">Your Name*</label>
                         <input type="text" id="name_input" className={styles.gbinput} onChange={handleChange} value={inputs.guestname || ""} name="guestname" />
                 </div>
                 <div >
-                    <label className={styles.gblabel} for="msg_input">Your Message*</label>
+                    <label className={styles.gblabel} htmlFor="msg_input">Your Message*</label>
                         <textarea rows="5" cols="30" id="msg_input" className={styles.gbtextarea} value={inputs.msg || ""} onChange={handleChange} name="msg" />
                 </div>
                 <div >
